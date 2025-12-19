@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Ritikrpati23032003/kubernetes-ingress-deployment.git
+    repoURL: https://github.com/Samir-CloudAwswithDevops/kubernetes-ingress-deployment.git
     targetRevision: main
     path: k8s-files
     directory:
