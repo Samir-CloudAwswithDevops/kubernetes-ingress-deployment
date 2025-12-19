@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: azure-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Samir-CloudAwswithDevops/kubernetes-ingress-deployment.git
+    targetRevision: main
+    path: k8s-files
+    directory:
+      include: azure.yml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
